@@ -25,7 +25,7 @@ export const WalletConnectionProvider = ({ children }: { children: React.ReactNo
   const [isConnected, setIsConnected] = useState(false);
   const [walletAddress, setWalletAddress] = useState<string | null>(null);
 
-  const connectWallet = async () => {
+  const connectWallet = async (): Promise<void> => {
     // In a real implementation, this would use Web3 libraries like ethers.js or web3.js
     // For now, we'll simulate a connection
     try {
@@ -43,7 +43,7 @@ export const WalletConnectionProvider = ({ children }: { children: React.ReactNo
         description: `Address: ${mockAddress.slice(0, 6)}...${mockAddress.slice(-4)}`,
       });
       
-      return mockAddress;
+      // Don't return the address, to match the Promise<void> return type
     } catch (error) {
       toast.error("Failed to connect wallet", {
         description: "Please try again later",
