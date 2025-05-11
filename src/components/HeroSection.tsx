@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
@@ -31,9 +32,11 @@ const HeroSection = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button className="crypto-button glow-effect" size="lg">
-            Claim Now – Limited Time Offer
-          </Button>
+          <Link to="/mint">
+            <Button className="crypto-button glow-effect" size="lg">
+              Claim Now – Limited Time Offer
+            </Button>
+          </Link>
           
           <div className="flex items-center gap-2 py-2 px-4 rounded-full bg-muted/30 backdrop-blur-sm">
             <div className="w-2 h-2 bg-crypto-accent rounded-full animate-pulse"></div>

@@ -1,6 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
+import { Link as RouterLink } from 'react-router-dom';
+import { ConnectWalletButton } from './WalletConnectionProvider';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,16 +26,15 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <a href="/" className="font-bold text-xl crypto-gradient-text">DigiBazaar24</a>
+            <RouterLink to="/" className="font-bold text-xl crypto-gradient-text">DigiBazaar24</RouterLink>
           </div>
           
           <nav className="hidden md:flex items-center space-x-6">
-            <a href="#airdrop" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Airdrop</a>
-            <a href="#defi" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">DeFi Platform</a>
-            <a href="#nfts" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">NFT Collection</a>
-            <Button className="crypto-button" size="sm">
-              Connect Wallet
-            </Button>
+            <RouterLink to="/#airdrop" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Airdrop</RouterLink>
+            <RouterLink to="/#defi" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">DeFi Platform</RouterLink>
+            <RouterLink to="/collection" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">NFT Collection</RouterLink>
+            <RouterLink to="/mint" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Mint NFT</RouterLink>
+            <ConnectWalletButton />
           </nav>
           
           <div className="md:hidden">
@@ -57,31 +58,38 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 bg-crypto-darker/95 backdrop-blur-lg">
-            <a
-              href="#airdrop"
+            <RouterLink
+              to="/#airdrop"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-muted/50"
               onClick={() => setIsMenuOpen(false)}
             >
               Airdrop
-            </a>
-            <a
-              href="#defi"
+            </RouterLink>
+            <RouterLink
+              to="/#defi"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-muted/50"
               onClick={() => setIsMenuOpen(false)}
             >
               DeFi Platform
-            </a>
-            <a
-              href="#nfts"
+            </RouterLink>
+            <RouterLink
+              to="/collection"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-muted/50"
               onClick={() => setIsMenuOpen(false)}
             >
               NFT Collection
-            </a>
+            </RouterLink>
+            <RouterLink
+              to="/mint"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-muted/50"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Mint NFT
+            </RouterLink>
             <div className="pt-2 pb-1">
-              <Button className="w-full crypto-button" size="sm" onClick={() => setIsMenuOpen(false)}>
-                Connect Wallet
-              </Button>
+              <div className="px-3">
+                <ConnectWalletButton />
+              </div>
             </div>
           </div>
         </div>
