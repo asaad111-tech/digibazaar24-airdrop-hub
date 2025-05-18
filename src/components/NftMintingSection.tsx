@@ -6,7 +6,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Link } from "react-router-dom";
 
 const NftMintingSection = () => {
-  // Updated NFT data with the new images
+  // Updated NFT data with all the new images
   const nfts = [
     {
       id: 1,

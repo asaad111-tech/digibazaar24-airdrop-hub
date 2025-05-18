@@ -15,42 +15,96 @@ const NftCollection = () => {
   const isMobile = useIsMobile();
   const [activeTab, setActiveTab] = useState("all");
   
-  // Dummy NFT collections data
+  // Updated collections data with the new images
   const collections = [
     {
       id: 1,
-      name: "Crypto Punks",
-      description: "Iconic pixelated characters with unique attributes",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=300&h=300",
-      items: 10000,
+      name: "Dragon Series",
+      description: "Exclusive dragon-themed NFTs with elemental powers",
+      image: "/lovable-uploads/87c68563-7a1d-4c73-99d1-613a69d2275f.png",
+      items: 765,
       floorPrice: "0.45 ETH",
-      category: "avatars"
+      category: "dragons"
     },
     {
       id: 2,
-      name: "Galactic Apes",
-      description: "Space-themed primate collection with cosmic attributes",
-      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=300&h=300",
-      items: 8888,
+      name: "Lion Collection",
+      description: "Majestic lions in various artistic styles",
+      image: "/lovable-uploads/95240f0b-f18d-4f35-8fe6-9883a08c0cef.png",
+      items: 342,
       floorPrice: "0.32 ETH",
       category: "animals"
     },
     {
       id: 3,
-      name: "Neon Riders",
-      description: "Cyberpunk motorcycle enthusiasts from the future",
-      image: "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?auto=format&fit=crop&w=300&h=300",
-      items: 5000,
+      name: "Splash Art",
+      description: "Vibrant NFTs featuring splash art techniques",
+      image: "/lovable-uploads/44e8b55d-838c-40fe-a033-3c09b73019c8.png",
+      items: 521,
       floorPrice: "0.28 ETH",
-      category: "cyberpunk"
+      category: "abstract"
     },
     {
       id: 4,
-      name: "Digital Dreams",
-      description: "Abstract art pieces representing digital consciousness",
-      image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=300&h=300",
-      items: 3000,
-      floorPrice: "0.15 ETH",
+      name: "Dragon Fury",
+      description: "Ferocious dragons with unique abilities and traits",
+      image: "/lovable-uploads/224eef78-2e6c-40fd-ac59-369f7e698ec5.png",
+      items: 254,
+      floorPrice: "0.52 ETH",
+      category: "dragons"
+    },
+    {
+      id: 5,
+      name: "Silver Dragons",
+      description: "Rare silver-scaled dragons with mythical powers",
+      image: "/lovable-uploads/e6aa26b6-a4bb-4d91-b70c-7452aee6d525.png",
+      items: 125,
+      floorPrice: "0.47 ETH",
+      category: "dragons"
+    },
+    {
+      id: 6,
+      name: "Mystic Realms",
+      description: "Fantasy landscapes and mystical castles",
+      image: "/lovable-uploads/83ca4947-311f-4d99-bf84-7d48cd8c688d.png",
+      items: 389,
+      floorPrice: "0.35 ETH",
+      category: "landscapes"
+    },
+    {
+      id: 7,
+      name: "Mythical Creatures",
+      description: "Unicorns and other legendary creatures from folklore",
+      image: "/lovable-uploads/9e38d765-bdd9-4269-8864-2cbc59685bd1.png",
+      items: 275,
+      floorPrice: "0.38 ETH",
+      category: "animals"
+    },
+    {
+      id: 8,
+      name: "Abstract Splashes",
+      description: "Colorful abstract art with dynamic paint splashes",
+      image: "/lovable-uploads/928fd561-364b-4284-95ec-d0e5323f38b8.png",
+      items: 452,
+      floorPrice: "0.25 ETH",
+      category: "abstract"
+    },
+    {
+      id: 9,
+      name: "Cyber Portraits",
+      description: "Futuristic digital portraits with cyberpunk aesthetics",
+      image: "/lovable-uploads/2b4ae3dc-9048-4700-9ab9-b22fbec14ae3.png",
+      items: 314,
+      floorPrice: "0.41 ETH",
+      category: "cyberpunk"
+    },
+    {
+      id: 10,
+      name: "Color Drip Series",
+      description: "Artistic NFTs featuring unique drip painting techniques",
+      image: "/lovable-uploads/5180964d-a3e5-4fa8-9df3-a3c6eacba0ea.png",
+      items: 287,
+      floorPrice: "0.29 ETH",
       category: "abstract"
     }
   ];
@@ -93,12 +147,13 @@ const NftCollection = () => {
           </div>
           
           <Tabs defaultValue="all" className="w-full max-w-4xl mx-auto" onValueChange={setActiveTab}>
-            <TabsList className="grid grid-cols-5 mb-8 bg-muted/30">
+            <TabsList className="grid grid-cols-6 mb-8 bg-muted/30">
               <TabsTrigger value="all">All</TabsTrigger>
-              <TabsTrigger value="avatars">Avatars</TabsTrigger>
+              <TabsTrigger value="dragons">Dragons</TabsTrigger>
               <TabsTrigger value="animals">Animals</TabsTrigger>
-              <TabsTrigger value="cyberpunk">Cyberpunk</TabsTrigger>
               <TabsTrigger value="abstract">Abstract</TabsTrigger>
+              <TabsTrigger value="cyberpunk">Cyberpunk</TabsTrigger>
+              <TabsTrigger value="landscapes">Landscapes</TabsTrigger>
             </TabsList>
             
             <TabsContent value={activeTab} className="mt-0">
