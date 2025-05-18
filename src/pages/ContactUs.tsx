@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Mail, Phone, Twitter, Discord, Telegram, Youtube } from "lucide-react";
+import { Mail, Phone, Twitter, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ConnectWalletButton } from "@/components/WalletConnectionProvider";
@@ -71,14 +71,18 @@ const ContactUs = () => {
               </div>
             </div>
             <div className="flex items-center p-3 bg-muted/10 rounded-lg">
-              <Discord className="h-5 w-5 mr-3 text-primary" />
+              <div className="h-5 w-5 mr-3 text-primary flex items-center justify-center">
+                <span className="text-primary font-bold">D</span>
+              </div>
               <div>
                 <div className="text-sm text-gray-400">Discord</div>
                 <div>Nfterratech_76637</div>
               </div>
             </div>
             <div className="flex items-center p-3 bg-muted/10 rounded-lg">
-              <Telegram className="h-5 w-5 mr-3 text-primary" />
+              <div className="h-5 w-5 mr-3 text-primary flex items-center justify-center">
+                <span className="text-primary font-bold">TG</span>
+              </div>
               <div>
                 <div className="text-sm text-gray-400">Telegram</div>
                 <div>@Nfterratech</div>
