@@ -16,31 +16,31 @@ const NftMint = () => {
   const [selectedAmount, setSelectedAmount] = useState(1);
   const [selectedNft, setSelectedNft] = useState(1);
   
-  // Dummy NFTs for minting
+  // Updated NFTs for minting with new images
   const nfts = [
     {
       id: 1,
-      name: "Crypto Punk #3478",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=300&h=300",
+      name: "Dragon Eye #247",
+      image: "/lovable-uploads/87c68563-7a1d-4c73-99d1-613a69d2275f.png",
       price: "0.45 ETH",
       remaining: 7,
-      traits: ["Rare", "Headwear", "Glasses"]
+      traits: ["Legendary", "Dragon", "Fire"]
     },
     {
       id: 2,
-      name: "Galactic Ape #103",
-      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=300&h=300",
-      price: "0.32 ETH",
-      remaining: 12,
-      traits: ["Epic", "Suit", "Laser Eyes"]
+      name: "Splash Lion #58",
+      image: "/lovable-uploads/44e8b55d-838c-40fe-a033-3c09b73019c8.png",
+      price: "0.28 ETH",
+      remaining: 22,
+      traits: ["Rare", "Lion", "Splash Art"]
     },
     {
       id: 3,
-      name: "Neon Rider #58",
-      image: "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?auto=format&fit=crop&w=300&h=300",
-      price: "0.28 ETH",
-      remaining: 22,
-      traits: ["Legendary", "Helmet", "Neon Glow"]
+      name: "Silver Dragon #76",
+      image: "/lovable-uploads/e6aa26b6-a4bb-4d91-b70c-7452aee6d525.png",
+      price: "0.47 ETH",
+      remaining: 6,
+      traits: ["Legendary", "Dragon", "Silver"]
     }
   ];
   
