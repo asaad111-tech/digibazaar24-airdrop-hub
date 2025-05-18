@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import NftCollection from "./pages/NftCollection";
 import NftMint from "./pages/NftMint";
 import AboutUs from "./pages/AboutUs";
+import ContactUs from "./pages/ContactUs";
 import WalletConnectionProvider from "./components/WalletConnectionProvider";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
             <Route path="/collection" element={<NftCollection />} />
             <Route path="/mint" element={<NftMint />} />
             <Route path="/about" element={<AboutUs />} />
+            <Route path="/contact" element={<ContactUs />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

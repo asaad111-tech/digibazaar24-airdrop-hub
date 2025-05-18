@@ -45,7 +45,11 @@ const Footer = () => {
                   About Us
                 </RouterLink>
               </li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+              <li>
+                <RouterLink to="/contact" className="text-gray-400 hover:text-white transition-colors">
+                  Contact Us
+                </RouterLink>
+              </li>
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
             </ul>
