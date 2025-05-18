@@ -10,6 +10,7 @@ import NftCollection from "./pages/NftCollection";
 import NftMint from "./pages/NftMint";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
+import AirdropPage from "./pages/AirdropPage";
 import WalletConnectionProvider from "./components/WalletConnectionProvider";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
             <Route path="/mint" element={<NftMint />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/contact" element={<ContactUs />} />
+            <Route path="/airdrop" element={<AirdropPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

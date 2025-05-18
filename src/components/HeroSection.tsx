@@ -38,7 +38,7 @@ const HeroSection = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Link to="/mint">
+          <Link to="/airdrop">
             <Button className="crypto-button glow-effect" size="lg">
               Claim Now – Limited Time Offer
             </Button>
