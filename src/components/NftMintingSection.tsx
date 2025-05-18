@@ -6,7 +6,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Link } from "react-router-dom";
 
 const NftMintingSection = () => {
-  // Updated NFT data with all the new images
+  // Updated NFT data - ensuring no duplicates between featured and carousel
   const nfts = [
     {
       id: 1,
@@ -31,7 +31,11 @@ const NftMintingSection = () => {
       price: "0.28 ETH",
       rarity: "Rare",
       remaining: 22
-    },
+    }
+  ];
+  
+  // Additional NFTs for the carousel only - no overlap with featured
+  const carouselNfts = [
     {
       id: 4,
       name: "Dragon Fury #129",
@@ -87,11 +91,22 @@ const NftMintingSection = () => {
       price: "0.29 ETH",
       rarity: "Rare",
       remaining: 18
+    },
+    {
+      id: 11,
+      name: "Digital Woman #78",
+      image: "/lovable-uploads/3277bb77-f81e-43ac-a307-9c4fcee7eec0.png",
+      price: "0.65 ETH",
+      rarity: "Legendary",
+      remaining: 3
     }
   ];
 
   // Display first 3 NFTs in the featured section
-  const featuredNfts = nfts.slice(0, 3);
+  const featuredNfts = nfts;
+
+  // Combine all NFTs for the carousel but ensure no duplicates
+  const allCarouselNfts = [...carouselNfts];
   
   return (
     <div className="py-20 px-4">
@@ -142,13 +157,13 @@ const NftMintingSection = () => {
           ))}
         </div>
         
-        {/* Full NFT Collection Carousel */}
+        {/* Full NFT Collection Carousel - with no duplicates */}
         <div className="mt-16">
           <h3 className="text-2xl font-bold text-center mb-8">Explore Our Full Collection</h3>
           
           <Carousel className="max-w-6xl mx-auto">
             <CarouselContent>
-              {nfts.map((nft) => (
+              {allCarouselNfts.map((nft) => (
                 <CarouselItem key={nft.id} className="sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
                   <Card className="crypto-card h-full overflow-hidden">
                     <div className="relative">

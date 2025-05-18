@@ -6,8 +6,14 @@ import { Link } from 'react-router-dom';
 const HeroSection = () => {
   return (
     <div className="relative min-h-[90vh] flex flex-col justify-center items-center px-4 overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute inset-0 bg-hero-pattern"></div>
+      {/* Background with new uploaded image */}
+      <div className="absolute inset-0 bg-hero-pattern">
+        <img 
+          src="/lovable-uploads/3277bb77-f81e-43ac-a307-9c4fcee7eec0.png" 
+          alt="Digital Art" 
+          className="w-full h-full object-cover opacity-40"
+        />
+      </div>
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-radial from-crypto-primary/10 via-transparent to-transparent opacity-70"></div>
       
       {/* Floating circles */}
